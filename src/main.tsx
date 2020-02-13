@@ -1,8 +1,7 @@
 import React from 'react';
-import Block from './client/ui/block';
 import ContentInner from './client/ui/contentInner';
 
-import './index.module.css';
+import './styles/index.module.css';
 
 export default class App extends React.Component {
   render() {

@@ -9,7 +9,7 @@ module.exports = {
   entry: './index.tsx',
   context,
   output: {
-    filename: 'ui.bundle.js',
+    filename: 'boooks.bundle.js',
     path: path.resolve(__dirname, 'dist'),
   },
   plugins: [
