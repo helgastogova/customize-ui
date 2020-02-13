@@ -3,7 +3,7 @@ import cl from 'classnames';
 
 import './block.module.css';
 
-export type BlockProps = {
+type BlockProps = {
   styleName?: string;
   children?: React.ReactNode;
   tagName?: 'span' | 'div';
