@@ -8,7 +8,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "yarn babel --out-dir build src -x '.ts' -x '.tsx' --config-file=./babel.config.js && cross-env TS_NODE_PROJECT=\"tsconfig-for-webpack-config.json\" webpack",
-    "clean": "rm -rf dist/* && rm -rf node_modules/.cache"
+    "clean": "rm -rf dist/* && rm -rf build/* &&  rm -rf node_modules/.cache"
   },
   "repository": {
     "type": "git",
