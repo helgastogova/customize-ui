@@ -72,6 +72,18 @@ module.exports = {
               sourceMap: true,
             },
           },
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                require('autoprefixer')(),
+                require('postcss-custom-properties')({
+                  preserve: false,
+                  importFrom: 'src/client/css/variables.css',
+                }),
+              ],
+            },
+          },
         ],
       },
     ],

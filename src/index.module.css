@@ -1,6 +1,10 @@
 .langingPage {
   padding: 10vh 10vw 0 10vw;
-  background: linear-gradient(to right, #53acff, #ff537b);
+  background: linear-gradient(
+    to right,
+    var(--left-gradient),
+    var(--right-gradient)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
