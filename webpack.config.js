@@ -19,7 +19,7 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@ui': path.resolve(__dirname, './src/components/'),
+      '@ui': path.resolve(__dirname, './src/client/components/ui'),
     },
   },
   devServer: {
