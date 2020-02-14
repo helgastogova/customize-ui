@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackRootPlugin = require('html-webpack-root-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const path = require('path');
 const context = path.resolve(__dirname, 'src');
@@ -9,17 +10,28 @@ module.exports = {
   entry: './index.tsx',
   context,
   output: {
-    filename: 'boooks.bundle.js',
     path: path.resolve(__dirname, 'dist'),
+    filename: 'boooks.bundle.js',
+    publicPath: '/',
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
-    new HtmlWebpackPlugin({title: 'BOOOKS'}),
+    new HtmlWebpackPlugin({
+      title: 'BOOOKS',
+      inlineSource: '.(js|css)$',
+      template: __dirname + '/public/index.html',
+      filename: __dirname + '/dist/index.html',
+    }),
     new HtmlWebpackRootPlugin(),
   ],
   resolve: {
     alias: {
       '@ui': path.resolve(__dirname, 'src/client/ui'),
+      '@client': path.resolve(__dirname, 'src/client'),
       '@components': path.resolve(__dirname, 'src/client/components'),
+      '@pages': path.resolve(__dirname, 'src/client/pages'),
     },
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
@@ -30,6 +42,13 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: 'images',
+        },
+      },
       {
         test: /\.tsx?$/,
         use: [
@@ -60,7 +79,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.css$/,
+        test: /\.module\.css$/,
         use: [
           {loader: 'style-loader'},
           {

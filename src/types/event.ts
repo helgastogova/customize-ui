@@ -9,6 +9,7 @@ export type ReactEvent = {
   metaKey: boolean;
   ctrlKey: boolean;
 };
+
 export type ReactEventTarget = {
   offsetWidth: number;
   offsetHeight: number;
@@ -33,9 +34,11 @@ export type ReactEventTarget = {
     left: number;
   };
 };
+
 export type ReactEventState = {
   state: {
     action: string;
   };
 };
+
 export type ReactEventHandler = React.EventHandler<any>;
