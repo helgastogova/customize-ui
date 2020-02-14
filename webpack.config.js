@@ -17,10 +17,11 @@ module.exports = {
     new HtmlWebpackRootPlugin(),
   ],
   resolve: {
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
     alias: {
-      '@ui': path.resolve(__dirname, './src/client/components/ui'),
+      '@ui': path.resolve(__dirname, 'src/client/ui'),
+      '@components': path.resolve(__dirname, 'src/client/components'),
     },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),

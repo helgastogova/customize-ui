@@ -1,0 +1,73 @@
+.link {
+  color: var(--main);
+  text-decoration: none;
+}
+
+.link:hover,
+.link:active {
+  color: var(--main-hover);
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.underlined {
+  text-decoration: underline;
+}
+
+.align_center {
+  text-align: center;
+}
+
+.align_right {
+  text-align: right;
+}
+
+.disabled {
+  color: var(--gray-text);
+  cursor: default;
+}
+
+.cursorDefault {
+  cursor: default;
+}
+
+.design_tag {
+  padding: 5px 7px;
+  background: var(--main);
+  color: var(--white);
+}
+
+.design_plain-text {
+  color: var(--text);
+}
+
+.display_block {
+  display: block;
+}
+
+.display_inline-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.size_14 {
+  font-size: 14px;
+}
+
+.size_16 {
+  font-size: 16px;
+}
+
+.size_20 {
+  font-size: 20px;
+}
+
+.color_white {
+  color: var(--white);
+}
+
+.color_black {
+  color: var(--black);
+}

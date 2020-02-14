@@ -1,10 +1,10 @@
-import React from "react";
-import { action } from "@storybook/addon-actions";
-import { Button } from "@storybook/react/demo";
-import { ContentInner } from "../src/components/contentInner";
+import React from 'react';
+import {action} from '@storybook/addon-actions';
+import {Button} from '@storybook/react/demo';
+import {ContentInner} from '../src/components/ui/contentInner';
 
 export default {
-  title: "Button"
+  title: 'Button',
 };
 
 export const text = () => <ContentInner version="mobile">контент</ContentInner>;

@@ -11,4 +11,10 @@
   --light-shadow: 0 4px 20px 0 rgba(8, 13, 74, 0.2);
 
   --white: #fff;
+
+  --main: #543b93;
+  --main-hover: #665399;
+
+  --text: #131313;
+  --gray-text: #262626;
 }
