@@ -1,7 +1,7 @@
-# ui
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## yarn build 
-сборка
-
-## yarn webpack-dev-server 
-вотч
+[http://localhost:3000](http://localhost:3000)
