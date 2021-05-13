@@ -12,7 +12,6 @@ type BaselayoutProps = {
 
 const Baselayout = ({children}: BaselayoutProps) => (
   <>
-    <Header />
     <div styleName="baseLayout">{children}</div>
     <Footer />
   </>

@@ -3,7 +3,7 @@ import * as React from 'react';
 const Head = () => {
   return (
     <head>
-      <title>Рекомендательный книжный сервис</title>
+      <title>My pet project</title>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
       <meta http-equiv="Content-Language" content="ru" />
       <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
@@ -61,15 +61,15 @@ const Head = () => {
       />
       <link href="/icon-android-192x192.png" rel="icon" sizes="192x192" />
       <link href="/icon-android-128x128.png" rel="icon" sizes="128x128" />
-      <meta property="og:title" content="Рекомендательный книжный сервис" />
+      <meta property="og:title" content="My pet project" />
       <meta property="og:type" content="article" />
       <meta name="twitter:image:src" content="share.jpg" />
       <meta property="og:image" content="share.jpg" />
       <meta http-equiv="Content-Language" content="ru" />
       <meta name="revisit-after" content="3 days" />
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-      <meta name="keywords" content="подобрать книгу для чтения" />
-      <meta name="description" content="Рекомендательный книжный сервис" />
+      <meta name="keywords" content="My pet project" />
+      <meta name="description" content="My pet project" />
       <link
         href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
         rel="stylesheet"
