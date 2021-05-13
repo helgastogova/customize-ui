@@ -1,9 +1,7 @@
-import * as React from 'react';
-
 import Header from '../header';
 import Footer from '../footer';
 
-import './baseLayout.module.css';
+import styles from './baseLayout.module.css';
 
 type BaselayoutProps = {
   styleName?: string;
@@ -12,7 +10,7 @@ type BaselayoutProps = {
 
 const Baselayout = ({children}: BaselayoutProps) => (
   <>
-    <div styleName="baseLayout">{children}</div>
+    <div className={styles.baseLayout}>{children}</div>
     <Footer />
   </>
 );

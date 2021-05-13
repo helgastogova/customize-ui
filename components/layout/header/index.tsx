@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import './header.module.css';
+import styles from './header.module.css';
 
 type HeaderProps = {
   children?: React.ReactNode;
 };
 
 const Header = ({children}: HeaderProps) => (
-  <header styleName="header">{children}</header>
+  <header className={styles.header}>{children}</header>
 );
 
 export default Header;

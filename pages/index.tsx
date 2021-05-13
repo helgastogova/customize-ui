@@ -1,16 +1,45 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/home.module.css';
+import Link from 'next/link';
 
-export default function Home() {
+import Layout, {siteTitle} from '../components/layout';
+import Date from '../components/date';
+
+import {getSortedPostsData} from '../lib/posts';
+import {GetStaticProps} from 'next';
+
+export default function Home({
+  data,
+}: {
+  data: {
+    date: string;
+    title: string;
+    id: string;
+  }[];
+}) {
   return (
-    <div className={styles.container}>
+    <Layout home>
       <Head>
-        <title>Hello app</title>
-        <meta name="description" content="My app" />
-        <link rel="icon" href="/favicon.ico" />
+        <title>{siteTitle}</title>
       </Head>
-      hello
-    </div>
+
+      {data.map(({id, date, title}) => (
+        <div key={id}>
+          <Link href={`/posts/${id}`}>
+            <a>
+              {title} | <Date dateString={date} />
+            </a>
+          </Link>
+        </div>
+      ))}
+    </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const data = getSortedPostsData();
+  return {
+    props: {
+      data,
+    },
+  };
+};
