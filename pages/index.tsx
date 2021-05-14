@@ -1,45 +1,35 @@
 import Head from 'next/head';
-import Link from 'next/link';
+import {useQuery} from '@apollo/client';
 
-import Layout, {siteTitle} from '@components/layout';
-import Date from '@components/date';
+import QUERY_COUNTRIES from './queryCountries.graphql';
 
-import {getSortedPostsData} from '../lib/posts';
-import {GetStaticProps} from 'next';
+import styles from '../styles/home.module.css';
 
-export default function Home({
-  data,
-}: {
-  data: {
-    date: string;
-    title: string;
-    id: string;
-  }[];
-}) {
+export default function Home() {
+  const {data, loading, error} = useQuery(QUERY_COUNTRIES);
+  // make sure all data is loaded
+  if (loading) {
+    return <p>loading...</p>;
+  }
+
+  // check for errors
+  if (error) {
+    return <p>:( an error happened</p>;
+  }
+
+  // if all good return data
   return (
-    <Layout home>
+    <div className={styles.container}>
       <Head>
-        <title>{siteTitle}</title>
+        <title>Countries GraphQL</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {data.map(({id, date, title}) => (
-        <div key={id}>
-          <Link href={`/posts/${id}`}>
-            <a>
-              {title} | <Date dateString={date} />
-            </a>
-          </Link>
-        </div>
-      ))}
-    </Layout>
+      <h1>Countries</h1>
+      <div>
+        {data.countries.map((country) => (
+          <div key={country._id}>{country.name}</div>
+        ))}
+      </div>
+    </div>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const data = getSortedPostsData();
-  return {
-    props: {
-      data,
-    },
-  };
-};
