@@ -26,8 +26,10 @@ export default function Home() {
       </Head>
       <h1>Countries</h1>
       <div>
-        {data.countries.map((country) => (
-          <div key={country._id}>{country.name}</div>
+        {data.continents.map((item, id) => (
+          <div key={id}>
+            {item.name}/{item.code}
+          </div>
         ))}
       </div>
     </div>

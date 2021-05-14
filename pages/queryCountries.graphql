@@ -1,6 +1,6 @@
-query {
-  countries: Country {
-    _id
+query ExampleQuery {
+  continents {
     name
+    code
   }
 }
