@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
-import Layout from '/components/layout';
-import Date from '/components/date';
+import Layout from '../../components/layout';
+import Date from '../../components/date';
 
 import {getAllPostIds, getPostData} from '../../lib/posts';
 import {GetStaticProps, GetStaticPaths} from 'next';
@@ -20,12 +20,11 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
-        <div>{postData.title}</div>
-        <div>
-          <Date dateString={postData.date} />
-        </div>
-        <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
-      </article>
+      <div>{postData.title}</div>
+      <div>
+        <Date dateString={postData.date} />
+      </div>
+      <div dangerouslySetInnerHTML={{__html: postData.contentHtml}} />
     </Layout>
   );
 }
