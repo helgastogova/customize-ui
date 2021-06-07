@@ -25,13 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>Countries</h1>
-      <div>
-        {data.continents.map((item, id) => (
-          <div key={id}>
-            {item.name}/{item.code}
-          </div>
-        ))}
-      </div>
+      SOON...
     </div>
   );
 }
