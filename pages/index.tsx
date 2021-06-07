@@ -24,7 +24,6 @@ export default function Home() {
         <title>Countries GraphQL</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Countries</h1>
       SOON...
     </div>
   );
