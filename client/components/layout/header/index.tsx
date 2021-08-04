@@ -1,13 +1,18 @@
-import * as React from 'react';
+import {FC} from 'react';
+import classnames from 'classnames';
 
 import styles from './header.module.css';
 
-type HeaderProps = {
+interface HeaderProps {
+  className?: string;
   children?: React.ReactNode;
+}
+
+const Footer: FC<HeaderProps> = ({className, children}) => {
+  if (!children) return null;
+  return (
+    <header className={classnames(styles.header, className)}>{children}</header>
+  );
 };
 
-const Header = ({children}: HeaderProps) => (
-  <header className={styles.header}>{children}</header>
-);
-
-export default Header;
+export default Footer;

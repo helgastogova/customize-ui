@@ -6,7 +6,7 @@ export default function About() {
       <Head>
         <title>About</title>
       </Head>
-      fgfgew
+      about
     </div>
   );
 }
