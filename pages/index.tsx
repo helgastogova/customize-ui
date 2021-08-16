@@ -4,6 +4,7 @@ import {useQuery} from '@apollo/client';
 import BaseLayout from '@components/layout/baseLayout';
 import Loader from '@ui/loader';
 import ContentInner from '@ui/contentInner';
+import Text from '@ui/text';
 
 import Wizard from '@components/wizard';
 
@@ -14,10 +15,13 @@ export default function Home() {
     <BaseLayout>
       <div className={styles.container}>
         <Head>
-          <title>Customize UI</title>
+          <title>Helgastogova</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Wizard />
+        <Text size="48" align="center">
+          Hi 👋 ! Nice to see you! <br />
+          I'm Olga Stogova.
+        </Text>
       </div>
     </BaseLayout>
   );

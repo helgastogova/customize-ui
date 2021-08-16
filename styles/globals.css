@@ -7,7 +7,8 @@ html {
 }
 
 body {
-  font-size: 16px;
+  font-size: 18px;
+  line-height: 1.4;
   background: #fff;
   font-family: Menlo, Monaco, 'Courier New', monospace;
 }

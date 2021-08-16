@@ -8,9 +8,9 @@ import {Size} from '../types';
 export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   bold?: boolean;
   align?: 'center' | 'right';
-  tagName?: 'p' | 'div' | 'h1' | 'h2';
+  tagName?: 'p' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   size?: Size;
-  children: React.ReactChild;
+  children: React.ReactNode;
 }
 
 const Text: React.FC<TextProps> = ({
