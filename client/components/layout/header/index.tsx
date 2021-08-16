@@ -1,21 +1,16 @@
-import cx from 'classnames';
-
 import ContentInner from '@ui/contentInner';
 import Logo from '../logo';
 
+import Menu from '@components/menu';
+
 import styles from './header.module.css';
 
-interface HeaderProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const Header: React.FC<HeaderProps> = ({children, className}) => {
+const Header: React.FC = () => {
   return (
     <header className={styles.root}>
-      <ContentInner className={cx(styles.inner, className)}>
+      <ContentInner className={styles.inner}>
         <Logo />
-        <div className={styles.children}>{children && children}</div>
+        <Menu />
       </ContentInner>
     </header>
   );

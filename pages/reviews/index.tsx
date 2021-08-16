@@ -1,12 +1,15 @@
-import {useReviewsListQuery} from '../../generated/graphql';
+//import {useReviewsListQuery} from '../../generated/graphql';
+import {useQuery} from '@apollo/client';
+import {QUERY_POST_REVIEW} from './query';
 
-import ContentInner from '../../components/ui/contentInner';
-import Loader from '../../components/ui/loader';
+import ContentInner from '@ui/contentInner';
+import Loader from '@ui/loader';
 
 import AddReviewForm from './form';
 
 const Reviews: React.FC = () => {
-  const {data, error, loading} = useReviewsListQuery();
+  //const {data, error, loading} = useReviewsListQuery();
+  const {loading, error, data} = useQuery(QUERY_POST_REVIEW);
 
   if (loading) {
     return (
@@ -31,7 +34,7 @@ const Reviews: React.FC = () => {
   return (
     <ContentInner>
       {listItems}
-      <AddReviewForm />
+      {/* <AddReviewForm /> */}
     </ContentInner>
   );
 };

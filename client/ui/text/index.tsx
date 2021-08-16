@@ -10,27 +10,29 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   align?: 'center' | 'right';
   tagName?: 'p' | 'div' | 'h1' | 'h2';
   size?: Size;
+  children: React.ReactChild;
 }
 
 const Text: React.FC<TextProps> = ({
   align = 'left',
   bold,
-  tagName: (Component = 'p'),
+  tagName: Component = 'p',
   size,
   className,
-  ...props,
+  children,
 }) => {
+  if (!children) return null;
   return (
     <Component
-      {...props}
       className={cx(
         align && styles[`align-${align}`],
         bold && styles.bold,
         size && styles[`size-${size}`],
         className,
       )}
-    />
+    >
+      {children}
+    </Component>
   );
-});
-
+};
 export default Text;
