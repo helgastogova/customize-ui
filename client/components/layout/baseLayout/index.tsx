@@ -1,5 +1,3 @@
-import {FC} from 'react';
-
 import Header from '../header';
 import Footer from '../footer';
 
@@ -10,10 +8,10 @@ type BaseLayoutProps = {
   children?: React.ReactNode;
 };
 
-const BaseLayout: FC<BaseLayoutProps> = ({children}) => (
+const BaseLayout: React.FC<BaseLayoutProps> = ({children}) => (
   <>
     <Header />
-    <div className={styles.baseLayout}>{children}</div>
+    <div className={styles.content}>{children}</div>
     <Footer />
   </>
 );

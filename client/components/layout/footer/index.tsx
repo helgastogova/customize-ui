@@ -1,17 +1,19 @@
-import {FC} from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
+
+import ContentInner from '@ui/contentInner';
 
 import styles from './footer.module.css';
 
 interface FooterProps {
-  className?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-const Footer: FC<FooterProps> = ({className, children}) => {
-  if (!children) return null;
+const Footer: React.FC<FooterProps> = ({children, className}) => {
   return (
-    <footer className={classnames(styles.footer, className)}>{children}</footer>
+    <footer className={cx(styles.root, className)}>
+      {children && <ContentInner>{children}</ContentInner>}
+    </footer>
   );
 };
 

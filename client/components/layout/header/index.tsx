@@ -1,18 +1,24 @@
-import {FC} from 'react';
-import classnames from 'classnames';
+import cx from 'classnames';
+
+import ContentInner from '@ui/contentInner';
+import Logo from '../logo';
 
 import styles from './header.module.css';
 
 interface HeaderProps {
-  className?: string;
   children?: React.ReactNode;
+  className?: string;
 }
 
-const Footer: FC<HeaderProps> = ({className, children}) => {
-  if (!children) return null;
+const Header: React.FC<HeaderProps> = ({children, className}) => {
   return (
-    <header className={classnames(styles.header, className)}>{children}</header>
+    <header className={styles.root}>
+      <ContentInner className={cx(styles.inner, className)}>
+        <Logo />
+        <div className={styles.children}>{children && children}</div>
+      </ContentInner>
+    </header>
   );
 };
 
-export default Footer;
+export default Header;

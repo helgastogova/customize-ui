@@ -4,8 +4,6 @@ interface State {
 }
 
 export const reducer = (state: any, action: any) => {
-  console.log('enteredNameReducer');
-
   switch (action.type) {
     case 'enteredName':
       if (state.enteredName === action.payload) {

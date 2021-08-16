@@ -1,0 +1,18 @@
+.root {
+  cursor: pointer;
+}
+
+.primary {
+  padding: 20px 40px;
+  background-color: white;
+  border-radius: 30px;
+  font-weight: bold;
+}
+
+.primary:hover {
+  box-shadow: 0 7px 20px -3px rgba(0, 0, 0, 0.5);
+}
+
+.block {
+  display: block;
+}

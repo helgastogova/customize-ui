@@ -1,3 +1,14 @@
-.header {
-  padding: 10px;
+.root {
+  height: 50px;
+  padding: 20px 0;
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.children {
+  margin-top: 6px;
 }
