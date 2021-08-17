@@ -5,10 +5,26 @@ import Text from '@ui/text';
 
 import styles from './footer.module.css';
 
+const randomEmojiArray = [
+  '🌱',
+  '🍭',
+  '💡',
+  '🥦',
+  '👩‍💻',
+  '🙀',
+  '🦄',
+  '🍀',
+  '🌈',
+  '🏕',
+];
+
 const Footer: React.FC = () => {
   return (
     <footer className={styles.root}>
-      <Text align="center">Thank you for reading!</Text>
+      <Text align="center">
+        Thank you for reading!{' '}
+        {randomEmojiArray[Math.floor(Math.random() * 10)]}
+      </Text>
     </footer>
   );
 };
