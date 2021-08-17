@@ -1,0 +1,13 @@
+.root {
+  margin-top: 50px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: column-reverse;
+}
+
+.subjects {
+  margin-top: 30px;
+  line-height: 200%;
+}

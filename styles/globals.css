@@ -15,16 +15,7 @@ body {
 
 a {
   text-decoration: none;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-b {
-  font-weight: 500;
+  color: #2998ff;
 }
 
 html,
@@ -110,11 +101,6 @@ input {
   padding: 0;
   border: 0;
   vertical-align: baseline;
-}
-
-b,
-strong {
-  font-weight: 500;
 }
 
 article,

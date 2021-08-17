@@ -5,6 +5,7 @@ import BaseLayout from '@components/layout/baseLayout';
 import Loader from '@ui/loader';
 import ContentInner from '@ui/contentInner';
 import Text from '@ui/text';
+import CV from '@components/cv';
 
 import styles from '../styles/home.module.css';
 
@@ -13,13 +14,11 @@ export default function Home() {
     <BaseLayout>
       <div className={styles.container}>
         <Head>
-          <title>Helgastogova</title>
+          <title>Helgastogova / senior software developer</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <Text size="48" align="center">
-          Hi 👋 ! Nice to see you! <br />
-          I'm Olga Stogova.
-        </Text>
+
+        <CV />
       </div>
     </BaseLayout>
   );

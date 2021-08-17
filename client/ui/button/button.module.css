@@ -4,7 +4,8 @@
 
 .primary {
   padding: 20px 40px;
-  background-color: white;
+  background-color: #2998ff;
+  color: #fff;
   border-radius: 30px;
   font-weight: bold;
 }
@@ -15,4 +16,10 @@
 
 .block {
   display: block;
+}
+
+.centered {
+  display: block;
+  width: max-content;
+  margin: 0 auto;
 }

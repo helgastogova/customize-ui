@@ -26,6 +26,10 @@
   font-size: 32px;
 }
 
+.size-36 {
+  font-size: 32px;
+}
+
 .size-46 {
   font-size: 46px;
 }
@@ -36,4 +40,8 @@
 
 .size-76 {
   font-size: 76px;
+}
+
+.color-gray {
+  color: #7d7d7d;
 }
