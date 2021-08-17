@@ -1,18 +1,14 @@
 import cx from 'classnames';
 
 import ContentInner from '@ui/contentInner';
+import Text from '@ui/text';
 
 import styles from './footer.module.css';
 
-interface FooterProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-const Footer: React.FC<FooterProps> = ({children, className}) => {
+const Footer: React.FC = () => {
   return (
-    <footer className={cx(styles.root, className)}>
-      {children && <ContentInner>{children}</ContentInner>}
+    <footer className={styles.root}>
+      <Text align="center">Thank you for reading!</Text>
     </footer>
   );
 };

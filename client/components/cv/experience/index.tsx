@@ -5,6 +5,7 @@ import Loader from '@ui/loader';
 
 import ExperienceItem from './item';
 import Skills from './skills';
+import Education from '../education';
 
 import styles from './experience.module.css';
 
@@ -43,7 +44,9 @@ const Experience: React.FC = () => {
       <div className={styles.wrapper}>
         {loading ? <Loader centered /> : List}
       </div>
-      <Text align="center">Thank you for reading!</Text>
+
+      <Text align="center" className={styles.end}></Text>
+      <Education />
     </div>
   );
 };
