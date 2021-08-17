@@ -5,9 +5,6 @@ import styles from './experience.module.css';
 const Skills: React.FC = () => {
   return (
     <>
-      <Text size="16" className="noPrint">
-        9+ years of experience
-      </Text>
       <div className={styles.subjects}>
         <Text className={styles.p}>
           <b>Frontend:</b> React/Redux, Java Script, Flow/Type Script, GraphQL,

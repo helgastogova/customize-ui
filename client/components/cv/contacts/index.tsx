@@ -25,7 +25,7 @@ const Contacts: React.FC = () => {
         <Link
           className={styles.link}
           target="_blank"
-          to="www.linkedin.com/in/helgastogova"
+          to="http://www.linkedin.com/in/helgastogova"
         >
           linkedin.com/in/helgastogova
         </Link>

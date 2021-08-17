@@ -1,4 +1,5 @@
 import {gql, useQuery} from '@apollo/client';
+import cx from 'classnames';
 
 import Text from '@ui/text';
 import Loader from '@ui/loader';
@@ -41,11 +42,13 @@ const Experience: React.FC = () => {
   return (
     <div className={styles.root}>
       <Skills />
+      <Text bold size="18" className={cx('noPrint', styles.head)}>
+        9+ years of experience:
+      </Text>
       <div className={styles.wrapper}>
         {loading ? <Loader centered /> : List}
       </div>
 
-      <Text align="center" className={styles.end}></Text>
       <Education />
     </div>
   );

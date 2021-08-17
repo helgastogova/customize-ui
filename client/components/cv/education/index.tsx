@@ -31,7 +31,10 @@ const Education: React.FC = () => {
 
   return (
     <div className={styles.root}>
-      {loading ? <Loader centered /> : List} Education:
+      {loading ? <Loader centered /> : List}{' '}
+      <Text bold size="18" className={styles.head}>
+        Education:
+      </Text>
     </div>
   );
 };

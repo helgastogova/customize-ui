@@ -22,7 +22,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className={styles.root}>
-      <Link target="_blank" to={`http://${companyUrl}`}>
+      <Link bold target="_blank" to={`http://${companyUrl}`}>
         {companyName}
       </Link>
       ,{' '}
