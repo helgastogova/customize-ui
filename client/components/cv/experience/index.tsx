@@ -5,6 +5,7 @@ import Link from '@ui/link';
 import Loader from '@ui/loader';
 
 import ExperienceItem from './item';
+import Skills from './skills';
 
 import styles from './experience.module.css';
 
@@ -39,18 +40,7 @@ const Experience: React.FC = () => {
 
   return (
     <div className={styles.root}>
-      <Text size="32">9+ years of experience</Text>
-      <Text className={styles.subjects}>
-        <b>Frontend:</b> React/Redux, Java Script, Flow/Type Script, GraphQL,
-        Next.js, CSS, HTML, creating UI Library, storybook.
-        <br />
-        <b>Bundlers:</b> webpack, babel.
-        <br />
-        <b>Graphic editors:</b> figma, sketch, zeplin, adobe family. <br />
-        <b>Testing:</b> unit test, jest.
-        <br />
-        <b>Other:</b> Github, Jira, Miro, FigJam, Asana.
-      </Text>
+      <Skills />
       <div className={styles.wrapper}>
         {loading ? <Loader centered /> : List}
       </div>

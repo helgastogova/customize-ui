@@ -1,4 +1,4 @@
-import Header from '../header';
+//import Header from '../header';
 import Footer from '../footer';
 import ContentInner from '@ui/contentInner';
 import Text from '@ui/text';
@@ -12,7 +12,7 @@ type BaseLayoutProps = {
 
 const BaseLayout: React.FC<BaseLayoutProps> = ({children, title}) => (
   <>
-    <Header />
+    {/* <Header /> */}
 
     <div className={styles.content}>
       <ContentInner>

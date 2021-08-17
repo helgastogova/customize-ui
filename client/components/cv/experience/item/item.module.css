@@ -3,6 +3,15 @@
   line-height: 200%;
 }
 
+.root p {
+  margin: 10px 0;
+}
+
 .p {
   margin: 20px 0;
+}
+
+.logo {
+  height: 30px;
+  width: 30px;
 }
