@@ -1,11 +1,22 @@
-import {usePageQuery} from '../../generated/graphql';
+import {useQuery, gql} from '@apollo/client';
 
 import Loader from '@ui/loader';
 import Text from '@ui/text';
 import ContentInner from '@ui/contentInner';
 
+const QUERY_PAGE = gql`
+  query Page {
+    pages(where: {name: "about"}) {
+      name
+      content {
+        html
+      }
+    }
+  }
+`;
+
 const Reviews: React.FC = () => {
-  const {data, error, loading} = usePageQuery();
+  const {data, error, loading} = useQuery(QUERY_PAGE);
 
   if (loading) {
     return (

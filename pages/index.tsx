@@ -6,8 +6,6 @@ import Loader from '@ui/loader';
 import ContentInner from '@ui/contentInner';
 import Text from '@ui/text';
 
-import Wizard from '@components/wizard';
-
 import styles from '../styles/home.module.css';
 
 export default function Home() {

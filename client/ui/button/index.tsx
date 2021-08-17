@@ -10,7 +10,7 @@ interface ButtonProps
   extends HTMLAttributes<HTMLButtonElement | HTMLAnchorElement> {
   tagName?: 'a' | 'button';
   design?: Design;
-  block: boolean;
+  block?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({

@@ -10,7 +10,7 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   align?: 'center' | 'right';
   tagName?: 'p' | 'div' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'span';
   size?: Size;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Text: React.FC<TextProps> = ({
