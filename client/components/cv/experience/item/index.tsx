@@ -8,9 +8,8 @@ interface ExperienceItemProps {
   position: string;
   companyName: string;
   companyUrl: string;
-  description: {html: React.ReactNode};
+  description: {html: string};
   place: string;
-  //   technologies: {html: React.ReactNode};
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({
@@ -20,7 +19,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
   companyUrl,
   description,
   place,
-  //   technologies,
 }) => {
   return (
     <div className={styles.root}>
@@ -34,7 +32,6 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
         </Text>
         <Text bold>{position}</Text>
       </div>
-      {/* <Text className={styles.p} innerHTML={technologies?.html} /> */}
       <Text className={styles.p} innerHTML={description?.html} />
     </div>
   );

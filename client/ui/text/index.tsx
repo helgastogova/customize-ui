@@ -12,7 +12,7 @@ export interface TextProps extends HTMLAttributes<HTMLParagraphElement> {
   size?: Size;
   children?: React.ReactNode;
   color?: Color;
-  innerHTML?: React.ReactNode;
+  innerHTML?: string;
 }
 
 const Text: React.FC<TextProps> = ({
@@ -35,9 +35,12 @@ const Text: React.FC<TextProps> = ({
         color && styles[`color-${color}`],
         className,
       )}
-      {...(innerHTML ? {dangerouslySetInnerHTML: {__html: innerHTML}} : {})}
     >
-      {children}
+      {innerHTML ? (
+        <span dangerouslySetInnerHTML={{__html: innerHTML}} />
+      ) : (
+        children
+      )}
     </Component>
   );
 };
