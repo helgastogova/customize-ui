@@ -9,14 +9,20 @@ import styles from './cv.module.css';
 const CV: React.FC = () => {
   return (
     <div className={styles.root}>
-      <Text size="48" align="center" className={styles.text}>
-        Hi 👋 I'm Olga Stogova <br />
-        Senior software engineer
-      </Text>
-      <Button centered design="primary">
-        Download CV
-      </Button>
-
+      <div className="onlyPrint">
+        <Text size="18">
+          Olga Stogova <br /> Senior software engineer
+        </Text>
+      </div>
+      <div className="noPrint">
+        <Text size="48" align="center" className={styles.text}>
+          Hi 👋 I'm Olga Stogova <br />
+          Senior software engineer
+        </Text>
+        <Button centered design="primary" className={styles.button}>
+          Download CV
+        </Button>
+      </div>
       <Contacts />
       <Experience />
     </div>

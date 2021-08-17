@@ -22,16 +22,14 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({
 }) => {
   return (
     <div className={styles.root}>
-      <div>
-        <Link target="_blank" to={`http://${companyUrl}`}>
-          {companyName}
-        </Link>
-        ,{' '}
-        <Text color="gray" tagName="span">
-          {dates}, {place}
-        </Text>
-        <Text bold>{position}</Text>
-      </div>
+      <Link target="_blank" to={`http://${companyUrl}`}>
+        {companyName}
+      </Link>
+      ,{' '}
+      <Text color="gray" tagName="span">
+        {dates}, {place}
+      </Text>
+      <Text bold>{position}</Text>
       <Text className={styles.p} innerHTML={description?.html} />
     </div>
   );

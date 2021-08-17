@@ -2,6 +2,27 @@
   margin-top: 60px;
 }
 
+@media print {
+  .root {
+    margin-top: 2px;
+  }
+}
+
 .link {
   margin: 10px 0;
+}
+
+.links {
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 400px) {
+  .link {
+    font-size: 16px;
+  }
+
+  .links {
+    line-height: 1.6;
+  }
 }

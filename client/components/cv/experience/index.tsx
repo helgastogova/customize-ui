@@ -1,7 +1,6 @@
 import {gql, useQuery} from '@apollo/client';
 
 import Text from '@ui/text';
-import Link from '@ui/link';
 import Loader from '@ui/loader';
 
 import ExperienceItem from './item';
@@ -44,6 +43,7 @@ const Experience: React.FC = () => {
       <div className={styles.wrapper}>
         {loading ? <Loader centered /> : List}
       </div>
+      <Text align="center">Thank you for reading!</Text>
     </div>
   );
 };
