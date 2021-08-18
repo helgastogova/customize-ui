@@ -2,6 +2,22 @@
   margin-top: 50px;
 }
 
+.root li {
+  position: relative;
+  padding: 5px 0 5px 30px;
+}
+
+.root li:before {
+  content: '–';
+  position: absolute;
+  left: 0;
+  top: 4px;
+}
+
+.root ul {
+  margin-bottom: 30px;
+}
+
 .wrapper {
   display: flex;
   flex-flow: column-reverse;
