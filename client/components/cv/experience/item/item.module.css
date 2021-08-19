@@ -1,7 +1,7 @@
 .root {
   position: relative;
   margin: 30px 0;
-  padding-left: 40px;
+  padding-left: 50px;
   line-height: 200%;
 }
 
@@ -21,15 +21,20 @@
   top: 27px;
   left: 8px;
   width: 4px;
-  height: calc(100% - 24px);
+  height: calc(100% - 34px);
   background: #2998ff;
   content: '';
 }
 
 @media print {
   .root {
-    padding-left: 30px;
-    border-left: 2px #888 solid;
+    padding-left: 0;
+    margin-bottom: -30px;
+  }
+
+  .root:after,
+  .root:before {
+    display: none;
   }
 }
 
@@ -61,5 +66,9 @@
     top: 0;
     left: -20px;
     height: 100%;
+  }
+
+  .p {
+    line-height: 1.8;
   }
 }

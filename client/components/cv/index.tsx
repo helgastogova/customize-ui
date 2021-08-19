@@ -19,7 +19,13 @@ const CV: React.FC = () => {
           Hi 👋 I'm Olga Stogova <br />
           Senior software engineer
         </Text>
-        <Button centered design="primary" className={styles.button}>
+        <Button
+          centered
+          design="primary"
+          className={styles.button}
+          target="_blank"
+          href="/Olga_Stogova_Senior_Software_Engineer.pdf"
+        >
           Download CV
         </Button>
       </div>

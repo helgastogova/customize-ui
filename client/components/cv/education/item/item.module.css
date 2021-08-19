@@ -28,8 +28,13 @@
 
 @media print {
   .root {
-    padding-left: 30px;
-    border-left: 2px #888 solid;
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .root:after,
+  .root:before {
+    display: none;
   }
 }
 
@@ -61,5 +66,9 @@
     top: 0;
     left: -20px;
     height: 100%;
+  }
+
+  .p {
+    line-height: 1.8;
   }
 }

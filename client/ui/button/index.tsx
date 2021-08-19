@@ -12,6 +12,8 @@ interface ButtonProps
   design?: Design;
   block?: boolean;
   centered?: boolean;
+  target: '_blank' | '_self';
+  href: string;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -20,11 +22,15 @@ const Button: React.FC<ButtonProps> = ({
   className,
   block,
   centered,
+  target = '_self',
+  href,
   ...props
 }) => {
   return (
     <Component
       {...props}
+      href={href}
+      target={target}
       className={classNames(
         styles.root,
         styles[design],

@@ -1,4 +1,4 @@
-//import Header from '../header';
+import Header from '../header';
 import Footer from '../footer';
 import ContentInner from '@ui/contentInner';
 import Text from '@ui/text';
@@ -9,15 +9,17 @@ type BaseLayoutProps = {
   children?: React.ReactNode;
   title?: string;
   showThankYou?: boolean;
+  showHeader?: boolean;
 };
 
 const BaseLayout: React.FC<BaseLayoutProps> = ({
   children,
   title,
   showThankYou = false,
+  showHeader = false,
 }) => (
   <>
-    {/* <Header /> */}
+    {showHeader && <Header />}
 
     <div className={styles.content}>
       <ContentInner>

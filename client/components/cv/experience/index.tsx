@@ -43,7 +43,7 @@ const Experience: React.FC = () => {
     <div className={styles.root}>
       <Skills />
       <Text bold size="18" className={cx('noPrint', styles.head)}>
-        9+ years of experience:
+        10+ years of experience:
       </Text>
       <div className={styles.wrapper}>
         {loading ? <Loader centered /> : List}

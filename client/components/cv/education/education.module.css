@@ -7,3 +7,9 @@
 .head {
   color: #2998ff;
 }
+
+@media print {
+  .root {
+    margin-top: 70px;
+  }
+}
