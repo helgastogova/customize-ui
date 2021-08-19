@@ -8,9 +8,14 @@ import styles from './baseLayout.module.css';
 type BaseLayoutProps = {
   children?: React.ReactNode;
   title?: string;
+  showThankYou?: boolean;
 };
 
-const BaseLayout: React.FC<BaseLayoutProps> = ({children, title}) => (
+const BaseLayout: React.FC<BaseLayoutProps> = ({
+  children,
+  title,
+  showThankYou = false,
+}) => (
   <>
     {/* <Header /> */}
 
@@ -22,8 +27,7 @@ const BaseLayout: React.FC<BaseLayoutProps> = ({children, title}) => (
         {children}
       </ContentInner>
     </div>
-
-    <Footer />
+    {showThankYou && <Footer />}
   </>
 );
 

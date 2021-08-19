@@ -11,7 +11,7 @@ import styles from '../styles/home.module.css';
 
 export default function Home() {
   return (
-    <BaseLayout>
+    <BaseLayout showThankYou>
       <div className={styles.container}>
         <Head>
           <title>Helgastogova / senior software developer</title>
