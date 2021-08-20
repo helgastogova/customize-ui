@@ -7,7 +7,7 @@ const Skills: React.FC = () => {
     <>
       <div className={styles.subjects}>
         <Text className={styles.p}>
-          <b>Frontend:</b> React/Redux, Java Script, Flow/Type Script, GraphQL,
+          <b>Frontend:</b> React/Redux, JavaScript, TypeScript, GraphQL,
           Next.js, CSS, HTML, creating UI Library, storybook.
         </Text>
         <Text className={styles.p}>
