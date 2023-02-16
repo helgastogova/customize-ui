@@ -30,7 +30,7 @@ const Contacts: React.FC = () => {
           linkedin.com/in/helgastogova
         </Link>
         <div className={cx(styles.link, 'onlyPrint')}>
-          phone: +7 964 703 00-67
+          phone: +44 7470 553670
         </div>
       </div>
     </div>
